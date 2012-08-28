@@ -100,7 +100,7 @@ class TestGetTextParser < Test::Unit::TestCase
   def testlib_erb
     @ary = GetText::ErbParser.parse('testlib/erb.rhtml')
 
-    assert_target 'aaa', ['testlib/erb.rhtml:8']
+    assert_target 'こんにちは', ['testlib/erb.rhtml:8']
     assert_target 'aaa\n', ['testlib/erb.rhtml:11']
     assert_target 'bbb', ['testlib/erb.rhtml:12']
     assert_plural_target "ccc1", "ccc2", ['testlib/erb.rhtml:13']
